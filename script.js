@@ -28,9 +28,6 @@ $(function () {
 
 
 
-  
-
-
 
   
   // TODO: Add code to apply the past, present, or future class to each time
@@ -40,26 +37,93 @@ $(function () {
   // current hour in 24-hour time?
 
 
+  var text9 = document.querySelector('#hour-9');
+  var nm9 = '9';
 
-  text12 = document.querySelector('#hour-12');
-  var nm12 = '12';
+  function timeCheck9() {
+    if (nm9 < dayjs().format('H')) {
+      text9.classList.add('past')
+      // document.getElementById('#hour-9').className = 'past row time-block';
+      // document.getElementById('#hour-12').setAttribute('class', '.future');
+    }
+    else if (nm9 === dayjs().format('H')) {
+      text9.classList.add('present')
+      // document.getElementById('#hour-9').className = 'present row time-block';   
+    }
+    else if (nm9 > dayjs().format('H')){
+      text9.classList.add('future')
+      // document.querySelector('#hour-9').className = 'future row time-block';
+    }
+  }
 
-  function timeCheck12() {
-    if (nm12 < dayjs().format('H')) {
-      document.getElementById('#hour-12').className = 'past row time-block';
+
+
+  // text10 = document.querySelector('#hour-10');
+  // var nm10 = '10';
+
+  // function timeCheck10() {
+  //   if (nm10 < dayjs().format('H')) {
+  //     document.getElementById('#hour-10').className = 'past row time-block';
+  //     // document.getElementById('#hour-12').setAttribute('class', '.future');
+  //   }
+  //   else if (nm10 === dayjs().format('H')) {
+  //     document.getElementById('#hour-10').className = 'present row time-block';   
+  //   }
+  //   else {
+  //     document.querySelector('#hour-10').className = 'future row time-block';
+  //   }
+  // }
+
+  console.log(dayjs().format('H'));
+
+  var text11 = document.querySelector('#hour-11');
+  var nm11 = '12';
+
+  function timeCheck11() {
+    if (nm11 < dayjs().format('H')) {
+      text11.classList.add('past')
+      // document.getElementById('#hour-12').className = 'past row time-block';
       // document.getElementById('#hour-12').setAttribute('class', '.future');
       return
     }
-    else if (nm12 == dayjs().format('H')) {
-      document.getElementById('#hour-12').className = 'present row time-block';   
+    else if (nm11 === dayjs().format('H')) {
+      text11.classList.add('present')
+      // document.getElementById('#hour-12').className = 'present row time-block';   
       return   
     }
-    else if (nm12 > dayjs().format('H')){
-      document.querySelector('#hour-12').className = 'future row time-block';
+    else if (nm11 > dayjs().format('H')){
+      text11.classList.add('future')
+      // document.querySelector('#hour-12').className = 'future row time-block';
       return
     }
   }
 
+
+  var text12 = document.querySelector('#hour-12');
+  var nm12 = '12';
+
+  function timeCheck12() {
+    if (nm12 < dayjs().format('H')) {
+      text12.classList.add('past')
+      // document.getElementById('#hour-12').className = 'past row time-block';
+      // document.getElementById('#hour-12').setAttribute('class', '.future');
+      return
+    }
+    else if (nm12 === dayjs().format('H')) {
+      text12.classList.add('present')
+      // document.getElementById('#hour-12').className = 'present row time-block';   
+      return   
+    }
+    else if (nm12 > dayjs().format('H')){
+      text12.classList.add('future')
+      // document.querySelector('#hour-12').className = 'future row time-block';
+      return
+    }
+  }
+
+  timeCheck9();
+  // timeCheck10();
+  timeCheck11();
   timeCheck12();
 
   // TODO: Add code to get any user input that was saved in localStorage and set
