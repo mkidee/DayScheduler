@@ -37,20 +37,20 @@ $(function () {
 
 
 
-  var text10 = document.querySelector('#hour-10');
-  var nm10 = '10';
+  var text9 = document.querySelector('#hour-9');
+  var nm9 = '09';
 
   function timeCheck9() {
-    if (nm10 < dayjs().format('H')) {
-      text10.classList.add('past')
+    if (nm9 < dayjs().format('H')) {
+      text9.classList.add('past')
       return
     }
-    else if (nm10 === dayjs().format('H')) {
-      text10.classList.add('present')
+    else if (nm9 === dayjs().format('H')) {
+      text9.classList.add('present')
       return   
     }
-    else if (nm10 > dayjs().format('H')){
-      text10.classList.add('future')
+    else if (nm9 > dayjs().format('H')){
+      text9.classList.add('future')
       return
     }
   }
