@@ -41,9 +41,17 @@ $(function () {
 
   save10.addEventListener("click", function() {
     textin10.textContent = todo10;
-    localStorage.setItem("todo10", todo10);
+    localStorage.setItem("todo10", JSON.stringify(todo10));
+    render10();
   });
 
+  function render10() {
+    var display10 = JSON.parse(localStorage.getItem("todo10"));
+    textin10.textContent = display10;
+    // textin10.textContent = JSON.parse(localStorage.getItem("todo10"));
+  }
+
+// window.localStorage.clear();
 
 
 
