@@ -10,6 +10,8 @@ $(function () {
   // useful when saving the description in local storage?
 
 
+  var today = document.querySelector('#currentDay');
+
   // this is an ex of trying to do all classes at once
   var save = document.querySelector('.saveBtn');
   var toDoText = document.querySelector('.description');
@@ -56,4 +58,7 @@ $(function () {
 
 
   // TODO: Add code to display the current date in the header of the page.
+  
+  today.textContent = dayjs().format('MMMM D, YYYY');
+
 });
