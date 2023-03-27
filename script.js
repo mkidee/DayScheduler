@@ -24,14 +24,24 @@ $(function () {
   var todo10 = localStorage.getItem("todo10");
   textin10.textContent = todo10;
 
-
+  var nm12 = '0';
   
   // TODO: Add code to apply the past, present, or future class to each time
   // block by comparing the id to the current hour. HINTS: How can the id
   // attribute of each time-block be used to conditionally add or remove the
   // past, present, and future classes? How can Day.js be used to get the
   // current hour in 24-hour time?
-  //
+  
+
+  function timeCheck12() {
+    if (nm12 < dayjs().format('H').value) {
+      document.getElementById('#hour-12').className = '.future';
+      // document.getElementById('hour-12').setAttribute('class', 'future');
+    }
+  }
+
+  timeCheck12();
+
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
@@ -53,12 +63,9 @@ $(function () {
     // textin10.textContent = JSON.parse(localStorage.getItem("todo10"));
   }
 
-// window.localStorage.clear();
-
-
-
   // TODO: Add code to display the current date in the header of the page.
-  
   today.textContent = dayjs().format('MMMM D, YYYY');
 
 });
+
+// use - window.localStorage.clear(); to clear all the local for testing.
