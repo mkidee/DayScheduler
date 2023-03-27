@@ -9,12 +9,20 @@ $(function () {
   // time-block containing the button that was clicked? How might the id be
   // useful when saving the description in local storage?
 
+
+  // this is an ex of trying to do all classes at once
   var save = document.querySelector('.saveBtn');
   var toDoText = document.querySelector('.description');
-
   var toDos = localStorage.getItem("toDos");
-
   toDoText.textContent = toDos;
+
+// this is an example of using ids for each individual piece
+  var save10 = document.querySelector('#btn10');
+  var textin10 = document.querySelector('#text10');
+  var todo10 = localStorage.getItem("todo10");
+  textin10.textContent = todo10;
+
+
   
   // TODO: Add code to apply the past, present, or future class to each time
   // block by comparing the id to the current hour. HINTS: How can the id
@@ -29,6 +37,11 @@ $(function () {
   save.addEventListener("click", function() {
     toDoText.textContent = toDos;
     localStorage.setItem("toDos", toDos);
+  }); 
+
+  save10.addEventListener("click", function() {
+    textin10.textContent = todo10;
+    localStorage.setItem("todo10", todo10);
   });
 
 
