@@ -4,14 +4,11 @@
 
 
 $(function () {
-  // TODO: Add a listener for click events on the save button. This code should
-  // use the id in the containing time-block as a key to save the user input in
-  // local storage. HINT: What does `this` reference in the click listener
-  // function? How can DOM traversal be used to get the "hour-x" id of the
-  // time-block containing the button that was clicked? How might the id be
-  // useful when saving the description in local storage?
 
-
+  // this jquery function is going to call each time block from the html, 
+  // and then take the 'children' inside each one which will be the text entered,
+  // after that, the local storage is going to receive that text entered and turn it 
+  // into the variable stored in the local storage
   $(".time-block").each(function(){
     $(this).children(".description").val(localStorage.getItem($(this).attr("id")));
   })
@@ -19,8 +16,6 @@ $(function () {
   $(".saveBtn").on("click", function(){
     let timeSlot = $(this).parent().attr("id");
     let timeText = $(this).siblings(".description").val();
-
-    console.log("Time slot: " + timeSlot + " || Text entered: " + timeText);
 
     localStorage.setItem(timeSlot, timeText);
   })
@@ -30,9 +25,8 @@ $(function () {
 // ensuring that they each do their job- changing color depending the hour- comparing
 // their respective number value to the real time hour value
 
-
+  var nm9 = '9';
   var text9 = document.querySelector('#hour-9');
-  var nm9 = '09';
 
   function timeCheck9() {
     if (nm9 < dayjs().format('H')) {
@@ -221,7 +215,7 @@ $(function () {
     }
   }
 
-  
+
 
   timeCheck9();
   timeCheck10();
