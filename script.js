@@ -11,8 +11,7 @@ $(function () {
   // time-block containing the button that was clicked? How might the id be
   // useful when saving the description in local storage?
 
-  //this variable is used for the date display
-  var today = document.querySelector('#currentDay');
+
 
   // this is an ex of trying to do all classes at once
   var save = document.querySelector('.saveBtn');
@@ -25,17 +24,12 @@ $(function () {
   // var textin10 = document.querySelector('#text10');
   // var todo10 = localStorage.getItem("todo10");
   // textin10.textContent = todo10;
-
-
-
   
-  // TODO: Add code to apply the past, present, or future class to each time
-  // block by comparing the id to the current hour. HINTS: How can the id
-  // attribute of each time-block be used to conditionally add or remove the
-  // past, present, and future classes? How can Day.js be used to get the
-  // current hour in 24-hour time?
 
 
+// the following variables and functions on repeat are individual to each time slot
+// ensuring that they each do their job- changing color depending the hour- comparing
+// their respective number value to the real time hour value
 
   var text9 = document.querySelector('#hour-9');
   var nm9 = '09';
@@ -55,8 +49,6 @@ $(function () {
     }
   }
 
-
-
   var text10 = document.querySelector('#hour-10');
   var nm10 = '10';
 
@@ -74,8 +66,6 @@ $(function () {
       return
     }
   }
-
-
 
   var text11 = document.querySelector('#hour-11');
   var nm11 = '11';
@@ -98,7 +88,6 @@ $(function () {
       return
     }
   }
-
 
   var text12 = document.querySelector('#hour-12');
   var nm12 = '12';
@@ -232,7 +221,6 @@ $(function () {
     }
   }
 
-
   timeCheck9();
   timeCheck10();
   timeCheck11();
@@ -269,9 +257,10 @@ $(function () {
   //   // textin10.textContent = JSON.parse(localStorage.getItem("todo10"));
   // }
 
-  // TODO: Add code to display the current date in the header of the page.
-  today.textContent = dayjs().format('MMMM D, YYYY');
+  //this variable is used for the date display
+  var today = document.querySelector('#currentDay');
 
+  today.textContent = dayjs().format('MMMM D, YYYY');
 });
 
 // use - window.localStorage.clear(); to clear all the local for testing.
