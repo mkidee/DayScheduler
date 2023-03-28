@@ -13,13 +13,8 @@ $(function () {
 
 
 
-  
-// this is an example of using ids for each individual piece
-  // var save10 = document.querySelector('#btn10');
-  // var textin10 = document.querySelector('#text10');
-  // var todo10 = localStorage.getItem("todo10");
-  // textin10.textContent = todo10;
-  
+
+
 
 
 // the following variables and functions on repeat are individual to each time slot
@@ -233,12 +228,6 @@ $(function () {
   // attribute of each time-block be used to do this?
 
 
-
-  // save10.addEventListener("click", function() {
-  //   textin10.textContent = todo10;
-  //   localStorage.setItem("todo10", JSON.stringify(todo10));
-  //   render10();
-  // });
 
 
   //this variable is used for the date display
