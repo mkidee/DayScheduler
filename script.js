@@ -13,12 +13,7 @@ $(function () {
 
 
 
-  // this is an ex of trying to do all classes at once
-  var save = document.querySelector('.saveBtn');
-  var toDoText = document.querySelector('.description');
-  var toDos = localStorage.getItem("toDos");
-  toDoText.textContent = toDos;
-
+  
 // this is an example of using ids for each individual piece
   // var save10 = document.querySelector('#btn10');
   // var textin10 = document.querySelector('#text10');
@@ -236,12 +231,6 @@ $(function () {
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
-  
-  save.addEventListener("click", function() {
-    toDoText.textContent = toDos;
-    localStorage.setItem("toDos", toDos);
-  }); 
-
 
 
 
@@ -251,11 +240,6 @@ $(function () {
   //   render10();
   // });
 
-  // function render10() {
-  //   var display10 = JSON.parse(localStorage.getItem("todo10"));
-  //   textin10.textContent = display10;
-  //   // textin10.textContent = JSON.parse(localStorage.getItem("todo10"));
-  // }
 
   //this variable is used for the date display
   var today = document.querySelector('#currentDay');
