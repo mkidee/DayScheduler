@@ -17,27 +17,28 @@ $(function () {
     let timeSlot = $(this).parent().attr("id");
     let timeText = $(this).siblings(".description").val();
 
+    // console.log("Time slot: " + timeSlot + " || Text entered: " + timeText);
+
     localStorage.setItem(timeSlot, timeText);
   })
-
 
 // the following variables and functions on repeat are individual to each time slot
 // ensuring that they each do their job- changing color depending the hour- comparing
 // their respective number value to the real time hour value
 
-  var nm9 = '9';
+  var nm9 = '09';
   var text9 = document.querySelector('#hour-9');
 
   function timeCheck9() {
-    if (nm9 < dayjs().format('H')) {
+    if (nm9 < dayjs().format('HH')) {
       text9.classList.add('past')
       return
     }
-    else if (nm9 === dayjs().format('H')) {
+    else if (nm9 === dayjs().format('HH')) {
       text9.classList.add('present')
       return   
     }
-    else if (nm9 > dayjs().format('H')){
+    else if (nm9 > dayjs().format('HH')){
       text9.classList.add('future')
       return
     }
@@ -47,15 +48,15 @@ $(function () {
   var nm10 = '10';
 
   function timeCheck10() {
-    if (nm10 < dayjs().format('H')) {
+    if (nm10 < dayjs().format('HH')) {
       text10.classList.add('past')
       return
     }
-    else if (nm10 === dayjs().format('H')) {
+    else if (nm10 === dayjs().format('HH')) {
       text10.classList.add('present')
       return   
     }
-    else if (nm10 > dayjs().format('H')){
+    else if (nm10 > dayjs().format('HH')){
       text10.classList.add('future')
       return
     }
@@ -65,18 +66,18 @@ $(function () {
   var nm11 = '11';
 
   function timeCheck11() {
-    if (nm11 < dayjs().format('H')) {
+    if (nm11 < dayjs().format('HH')) {
       text11.classList.add('past')
       // document.getElementById('#hour-12').className = 'past row time-block';
       // document.getElementById('#hour-12').setAttribute('class', '.future');
       return
     }
-    else if (nm11 === dayjs().format('H')) {
+    else if (nm11 === dayjs().format('HH')) {
       text11.classList.add('present')
       // document.getElementById('#hour-12').className = 'present row time-block';   
       return   
     }
-    else if (nm11 > dayjs().format('H')){
+    else if (nm11 > dayjs().format('HH')){
       text11.classList.add('future')
       // document.querySelector('#hour-12').className = 'future row time-block';
       return
@@ -87,18 +88,18 @@ $(function () {
   var nm12 = '12';
 
   function timeCheck12() {
-    if (nm12 < dayjs().format('H')) {
+    if (nm12 < dayjs().format('HH')) {
       text12.classList.add('past')
       // document.getElementById('#hour-12').className = 'past row time-block';
       // document.getElementById('#hour-12').setAttribute('class', '.future');
       return
     }
-    else if (nm12 === dayjs().format('H')) {
+    else if (nm12 === dayjs().format('HH')) {
       text12.classList.add('present')
       // document.getElementById('#hour-12').className = 'present row time-block';   
       return   
     }
-    else if (nm12 > dayjs().format('H')){
+    else if (nm12 > dayjs().format('HH')){
       text12.classList.add('future')
       // document.querySelector('#hour-12').className = 'future row time-block';
       return
@@ -109,18 +110,18 @@ $(function () {
   var nm13 = '13';
 
   function timeCheck13() {
-    if (nm13 < dayjs().format('H')) {
+    if (nm13 < dayjs().format('HH')) {
       text13.classList.add('past')
       // document.getElementById('#hour-12').className = 'past row time-block';
       // document.getElementById('#hour-12').setAttribute('class', '.future');
       return
     }
-    else if (nm13 === dayjs().format('H')) {
+    else if (nm13 === dayjs().format('HH')) {
       text13.classList.add('present')
       // document.getElementById('#hour-12').className = 'present row time-block';   
       return   
     }
-    else if (nm13 > dayjs().format('H')){
+    else if (nm13 > dayjs().format('HH')){
       text13.classList.add('future')
       // document.querySelector('#hour-12').className = 'future row time-block';
       return
@@ -131,18 +132,18 @@ $(function () {
   var nm14 = '14';
 
   function timeCheck14() {
-    if (nm14 < dayjs().format('H')) {
+    if (nm14 < dayjs().format('HH')) {
       text14.classList.add('past')
       // document.getElementById('#hour-12').className = 'past row time-block';
       // document.getElementById('#hour-12').setAttribute('class', '.future');
       return
     }
-    else if (nm14 === dayjs().format('H')) {
+    else if (nm14 === dayjs().format('HH')) {
       text14.classList.add('present')
       // document.getElementById('#hour-12').className = 'present row time-block';   
       return   
     }
-    else if (nm14 > dayjs().format('H')){
+    else if (nm14 > dayjs().format('HH')){
       text14.classList.add('future')
       // document.querySelector('#hour-12').className = 'future row time-block';
       return
@@ -153,18 +154,18 @@ $(function () {
   var nm15 = '15';
 
   function timeCheck15() {
-    if (nm15 < dayjs().format('H')) {
+    if (nm15 < dayjs().format('HH')) {
       text15.classList.add('past')
       // document.getElementById('#hour-12').className = 'past row time-block';
       // document.getElementById('#hour-12').setAttribute('class', '.future');
       return
     }
-    else if (nm15 === dayjs().format('H')) {
+    else if (nm15 === dayjs().format('HH')) {
       text15.classList.add('present')
       // document.getElementById('#hour-12').className = 'present row time-block';   
       return   
     }
-    else if (nm15 > dayjs().format('H')){
+    else if (nm15 > dayjs().format('HH')){
       text15.classList.add('future')
       // document.querySelector('#hour-12').className = 'future row time-block';
       return
@@ -175,18 +176,18 @@ $(function () {
   var nm16 = '16';
 
   function timeCheck16() {
-    if (nm16 < dayjs().format('H')) {
+    if (nm16 < dayjs().format('HH')) {
       text16.classList.add('past')
       // document.getElementById('#hour-12').className = 'past row time-block';
       // document.getElementById('#hour-12').setAttribute('class', '.future');
       return
     }
-    else if (nm16 === dayjs().format('H')) {
+    else if (nm16 === dayjs().format('HH')) {
       text16.classList.add('present')
       // document.getElementById('#hour-12').className = 'present row time-block';   
       return   
     }
-    else if (nm16 > dayjs().format('H')){
+    else if (nm16 > dayjs().format('HH')){
       text16.classList.add('future')
       // document.querySelector('#hour-12').className = 'future row time-block';
       return
@@ -197,25 +198,26 @@ $(function () {
   var nm17 = '17';
 
   function timeCheck17() {
-    if (nm17 < dayjs().format('H')) {
+    if (nm17 < dayjs().format('HH')) {
       text17.classList.add('past')
       // document.getElementById('#hour-12').className = 'past row time-block';
       // document.getElementById('#hour-12').setAttribute('class', '.future');
       return
     }
-    else if (nm17 === dayjs().format('H')) {
+    else if (nm17 === dayjs().format('HH')) {
       text17.classList.add('present')
       // document.getElementById('#hour-12').className = 'present row time-block';   
       return   
     }
-    else if (nm17 > dayjs().format('H')){
+    else if (nm17 > dayjs().format('HH')){
       text17.classList.add('future')
       // document.querySelector('#hour-12').className = 'future row time-block';
       return
     }
   }
 
-
+  // these function calls are just making sure the text areas actually change colors
+  // depending on their comparison to the real time
 
   timeCheck9();
   timeCheck10();
