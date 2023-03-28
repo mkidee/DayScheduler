@@ -12,14 +12,24 @@ $(function () {
   // useful when saving the description in local storage?
 
 
+  $(".time-block").each(function(){
+    $(this).children(".description").val(localStorage.getItem($(this).attr("id")));
+  })
 
+  $(".saveBtn").on("click", function(){
+    let timeSlot = $(this).parent().attr("id");
+    let timeText = $(this).siblings(".description").val();
 
+    console.log("Time slot: " + timeSlot + " || Text entered: " + timeText);
 
+    localStorage.setItem(timeSlot, timeText);
+  })
 
 
 // the following variables and functions on repeat are individual to each time slot
 // ensuring that they each do their job- changing color depending the hour- comparing
 // their respective number value to the real time hour value
+
 
   var text9 = document.querySelector('#hour-9');
   var nm9 = '09';
@@ -211,6 +221,8 @@ $(function () {
     }
   }
 
+  
+
   timeCheck9();
   timeCheck10();
   timeCheck11();
@@ -220,15 +232,6 @@ $(function () {
   timeCheck15();
   timeCheck16();
   timeCheck17();
-
-
-
-  // TODO: Add code to get any user input that was saved in localStorage and set
-  // the values of the corresponding textarea elements. HINT: How can the id
-  // attribute of each time-block be used to do this?
-
-
-
 
   //this variable is used for the date display
   var today = document.querySelector('#currentDay');
